@@ -27,6 +27,10 @@ h1{
     font-family: var(--fuentePrincipal);
 }
 
+
+
+
+
 /* Globales */
 .contenedor{
     max-width: 120rem;
@@ -54,10 +58,18 @@ img{
     height: auto;
 }
 
+
+
+
+
 /* Utilidades */
 .text-center {
     text-align: center;
 }
+
+
+
+
 
 /* Degradados */
 .degradado-verde{
@@ -115,6 +127,8 @@ img{
 }
 
 
+
+
 /* ICONOS */
 .iconos{
     padding: var(--separacion) 0;
@@ -149,9 +163,20 @@ img{
     }
 }
 
+
+
+
 /* Sobre Tech PRO */
-.sobre-tech{
+.notavif.notwebp .sobre-tech{
     background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0%), url(../img/imagen-mujer.jpg);
+}
+.webp .sobre-tech{
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0%), url(../img/imagen-mujer.webp);
+}
+.avif .sobre-tech{
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0%), url(../img/imagen-mujer.avif);
+}
+.sobre-tech{
     background-position: right;
     background-repeat: repeat, no-repeat;
     background-size: 100%, 85rem;
@@ -171,6 +196,15 @@ img{
     padding-bottom: calc(var(--separacion) / 2);
 }
 @media (min-width: 768px){
+    .notavif.notwebp .sobre-tech{
+        background-image: linear-gradient(to left, transparent 50%, var(--primario) 0%), url(../img/imagen-mujer.jpg);
+    }
+    .webp .sobre-tech{
+        background-image: linear-gradient(to left, transparent 50%, var(--primario) 0%), url(../img/imagen-mujer.webp);
+    }
+    .avif .sobre-tech{
+        background-image: linear-gradient(to left, transparent 50%, var(--primario) 0%), url(../img/imagen-mujer.avif);
+    }
     .sobre-tech{
         background-image: linear-gradient(to left, transparent 50%, var(--primario) 0%), url(../img/imagen-mujer.jpg);
         background-position: top right;
@@ -201,6 +235,9 @@ img{
     font-size: 2rem;
     line-height: 2;
 }
+
+
+
 
 /* MODELOS */
 .modelos{
@@ -281,3 +318,92 @@ img{
         font-size: 4rem;
     }
 }
+
+
+
+
+/* Newsletter */
+.newsletter{
+    background-position: center, -9rem -10rem;
+    background-repeat:  no-repeat;
+    background-size: 100%, 80rem;
+
+}
+.notavif.notwebp .newsletter{
+    background-image: linear-gradient( to bottom, transparent 46.5%, var(--blanco) 0%), url(../img/newsletter.jpg);
+}
+.webp .newsletter{
+    background-image: linear-gradient( to bottom, transparent 46.5%, var(--blanco) 0%), url(../img/newsletter.webp);
+}
+.avif .newsletter{
+    background-image: linear-gradient( to bottom, transparent 46.5%, var(--blanco) 0%), url(../img/newsletter.avif);
+}
+.contenido-newsletter{
+    display: grid;
+    grid-template-rows: repeat(2,30rem);
+    gap: var(--separacion);
+}
+.texto-newsletter{
+    grid-row: 2/3;
+}
+.formulario input[type="text"]{
+    width: 100%;
+    padding: 1rem;
+}
+.formulario input[type="submit"]{
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--primario);
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 900;
+    border: none;
+    border-radius: 3rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .contenido-newsletter{
+        grid-template-rows:unset;
+        grid-template-columns:repeat(2,1fr);
+    }
+    .texto-newsletter{
+        grid-row: unset;
+        grid-column: 2/3;
+    }
+    .newsletter{
+        background-position: center, -27rem -10rem;
+        background-size: 100%, 130rem 86.5rem;
+        padding: var(--separacion) 0;
+        min-height: 40rem;
+    }
+    .notavif.notwebp .newsletter{
+        background-image: linear-gradient( to right, transparent 48.5%, var(--blanco) 0%), url(../img/newsletter.jpg);
+    }
+    .webp .newsletter{
+        background-image: linear-gradient( to right, transparent 48.5%, var(--blanco) 0%), url(../img/newsletter.webp);
+    }
+    .avif .newsletter{
+        background-image: linear-gradient( to right, transparent 48.5%, var(--blanco) 0%), url(../img/newsletter.avif);
+    }
+}
+@media (min-width: 2000px) {
+    .newsletter{
+        background-size: 100%, 150rem 99.9rem;
+        background-position: center, -10rem -20rem;
+    }
+}
+
+/* Footer */
+
+.footer p{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: var(--fuenteSecundaria);
+    font-weight: 900;
+    color: var(--primario);
+    padding: 2.5rem 0;
+}
+
